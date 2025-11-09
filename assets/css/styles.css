@@ -381,3 +381,68 @@ footer {
     border: 1px solid #ccc !important;
   }
 }
+
+/* Botón flotante de Telegram */
+.telegram-float-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  z-index: 1000;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.telegram-float-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.telegram-float-btn:active {
+  transform: scale(0.95);
+}
+
+.telegram-float-btn i {
+  transition: var(--transition);
+}
+
+.telegram-float-btn:hover i {
+  transform: rotate(10deg);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .telegram-float-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .telegram-float-btn i {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .telegram-float-btn {
+    bottom: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .telegram-float-btn i {
+    font-size: 1.125rem;
+  }
+}
